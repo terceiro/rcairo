@@ -9,7 +9,7 @@
 #export DH_RUBY_IGNORE_TESTS=ruby1.8 ruby1.9.1 require-rubygems
 #
 # If you need to specify the .gemspec (eg there is more than one)
-#export DH_RUBY_GEMSPEC=gem.gemspec
+export DH_RUBY_GEMSPEC=debian/cairo-debian.gemspec
 
 %:
 	dh $@ --buildsystem=ruby --with ruby
