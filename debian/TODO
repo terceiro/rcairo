@@ -1,0 +1,2 @@
+Decide whether to package test-unit, and if it gets packaged stop using
+debian/test-unit-stub.rb to run the tests.
