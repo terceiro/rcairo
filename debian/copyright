@@ -6,7 +6,7 @@ Files: *
 Copyright:
  Rcairo is copyrighted free software by Evan Marin, Øyvind Kolås, MenTaLguY and
  Kouhei Sutou, distributed under the same conditions as ruby.
-License:
+License: GPL-2
  You can redistribute it and/or modify it under either the terms of the GPL
  (see the file GPL), or the conditions below:
  .
@@ -53,7 +53,7 @@ License:
  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 Comment:
  On Debian systems, the full text of the GNU General Public License version can
- be found in the file `/usr/share/common-licenses/GPL'.
+ be found in the file `/usr/share/common-licenses/GPL-2'.
 
 Files: debian/*
 Copyright:
