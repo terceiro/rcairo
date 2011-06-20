@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Uploaders: Paul van Tilburg <paulvt@debian.org>, Antonio Terceiro <terceiro@softwarelivre.org>
 DM-Upload-Allowed: yes
-Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.2.4~)
+Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.2.4~), ruby-pkg-config, libcairo2-dev (>= 1.6.0), rake
 Standards-Version: 3.9.2
 Vcs-Git: git://git.debian.org/pkg-ruby-extras/ruby-cairo.git
 Vcs-Browser: http://git.debian.org/?p=pkg-ruby-extras/ruby-cairo.git;a=summary
