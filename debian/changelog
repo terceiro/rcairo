@@ -1,5 +1,135 @@
-ruby-cairo (0.1.0~FIXME-1) UNRELEASED; urgency=low
+ruby-cairo (1.10.0-1) UNRELEASED; urgency=low
 
-  * Initial release (Closes: #nnnn)
+  * New upstream release.
+  * Package is being renamed to ruby-cairo and migrated to use gem2deb.
 
  -- Antonio Terceiro <terceiro@softwarelivre.org>  Sun, 19 Jun 2011 15:10:37 -0700
+
+libcairo-ruby (1.8.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop package for Ruby 1.9.1 since the test suite doesn't pass. Closes: #565830.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Sat, 13 Feb 2010 10:15:01 +0100
+
+libcairo-ruby (1.8.0-1) unstable; urgency=low
+
+  [ Gunnar Wolf ]
+  * Changed section to Ruby as per ftp-masters' request
+
+  [ Paul van Tilburg ]
+  * New upstream release.
+  * debian/patches:
+    - Dropped patch 01_fix-st.h-ruby1.9-paths: fixed by upstream.
+  * debian/control:
+    - Bumped standards version to 3.8.1; no changes required.
+    - Added ${misc:Depends} to the depends of libcairo-ruby (binary).
+
+ -- Paul van Tilburg <paulvt@debian.org>  Tue, 05 May 2009 12:14:31 +0200
+
+libcairo-ruby (1.6.3-1) unstable; urgency=low
+
+  [ Paul van Tilburg ]
+  * New upstream release.
+  * Dropped patch 01_fix-ftools-extconf: fixed upsteam.
+  * Added patch 01_fix-st.h-ruby1.9-paths.
+  * Bumped build-dependancy on libcairo2 to >= 1.6.0.
+  * Fixed the too long line in debian/copyright.
+  * Bumped standards version to 3.8.0; no changes required.
+
+  [ Lucas Nussbaum ]
+  * Build-depend on r-p-t >= 0.14, to fix the ruby1.9
+    libs install problem.
+
+ -- Paul van Tilburg <paulvt@debian.org>  Sun, 10 Aug 2008 15:24:03 +0200
+
+libcairo-ruby (1.5.1-1) unstable; urgency=low
+
+  [ Arnaud Cornet ]
+  * Use new Homepage dpkg header.
+
+  [ Paul van Tilburg ]
+  * New upstream release.
+  * debian/patches:
+    - Dropped patches 002-missing-decl-and-string-len-struct.patch,
+      001-extconf-ruby1.9.patch: incorporated upstream.
+    - Added the FTBFS fix by Marc 'HE' Brockschmidt as
+      01_fix-ftools-extconf.diff.
+  * Bumped standards version to 3.7.3; no changes required.
+  * Added Vcs-* headers to debian/control.
+
+ -- Paul van Tilburg <paulvt@debian.org>  Mon, 31 Mar 2008 22:45:22 +0200
+
+libcairo-ruby (1.5.0-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS with ruby1.9, which doesn't have ftools anymore. Make both
+    1.8 and 1.9 builds use fileutils.rb instead. (Closes: #458679)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Sat, 08 Mar 2008 19:52:34 +0100
+
+libcairo-ruby (1.5.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped libcairo2-dev requirement to >= 1.2.0.
+  * Enabled CDBS simple patch sys in debian/rules.
+  * Added patch 001-extconf-ruby1.9.patch to fix the API incompatbility
+    with ruby1.9.
+  * Added patch 002-missing-decl-and-string-len-struct.patch to add a
+    missing variable declaration and fix struct member errors
+    (courtesy of Michael Ablassmeier).
+
+ -- Paul van Tilburg <paulvt@debian.org>  Wed, 13 Jun 2007 14:26:29 +0100
+
+libcairo-ruby (1.4.1-1) unstable; urgency=low
+
+  * New upstream release:
+    - Modified debian/rules to switch to extconf installation
+  * Adapted debian/control, debian/rules, and removed debian/control.in
+    to drop the Uploaders rule.
+  * Changed priority to optional, no idea why it was extras.
+  * Added debian/libcairo-ruby.examples to install the examples using this
+    file, not directly from debian/rules.
+  * New maintainer: me! I'm taking over from Thierry Reding.
+
+ -- Paul van Tilburg <paulvt@debian.org>  Wed, 18 Apr 2007 21:56:48 +0200
+
+libcairo-ruby (1.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fixed the URL in the description (courtesy of Tomas Pospisek,
+    closes: #361857).
+  * Bumped standards version to 3.7.2; no changes required.
+
+ -- Paul van Tilburg <paulvt@debian.org>  Mon,  3 Jul 2006 12:10:17 +0200
+
+libcairo-ruby (1.0.0-3) unstable; urgency=low
+
+  [ Thierry Reding ]
+  * libcairo-ruby1.8 now replaces libcairo-ruby (<= 1.0.0-1) to make it
+    installable again. Thanks to David Weinehall and Adam Majer for pointing
+    this out. (Closes: #361192)
+
+ -- Paul van Tilburg <paulvt@debian.org>  Mon, 10 Apr 2006 21:07:27 +0200
+
+libcairo-ruby (1.0.0-2) unstable; urgency=low
+
+  [ Thierry Reding ]
+  * Now uses CDBS for packaging.
+  * Provides packages linked against Ruby 1.8 and Ruby 1.9.
+  * Set myself as maintainer, the Debian Ruby/Extras Team as uploaders.
+  * Added versioned build-dependency on ruby-pkg-tools (>= 0.8) in order for
+    the @RUBY_EXTRAS_TEAM@ marker to be recognized.
+
+ -- Thierry Reding <thierry@doppeltgemoppelt.de>  Wed, 22 Mar 2006 13:39:17 +0100
+
+libcairo-ruby (1.0.0-1) unstable; urgency=low
+
+  * Initial release. (Closes: #342466)
+  * Uses "The Uploaders Rule" to automatically fill in the Uploaders: field in
+    the `debian/control' file so that all pkg-ruby-extras team members will be
+    listed.
+  * Added a note about the `setup.rb' script's license (LGPL) to the
+    `debian/copyright' file.
+
+ -- Thierry Reding <thierry@doppeltgemoppelt.de>  Wed,  4 Jan 2006 23:13:45 +0100
