@@ -15,8 +15,8 @@ Package: ruby-cairo
 Architecture: any
 XB-Ruby-Versions: ${ruby:Versions}
 Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter
-Replaces: libcairo-ruby (<< 0.1.0~FIXME-1~), libcairo-ruby1.8 (<< 0.1.0~FIXME-1~)
-Breaks: libcairo-ruby (<< 0.1.0~FIXME-1~), libcairo-ruby1.8 (<< 0.1.0~FIXME-1~)
+Replaces: libcairo-ruby (<< 1.10.0-1~), libcairo-ruby1.8 (<< 1.10.0-1~)
+Breaks: libcairo-ruby (<< 1.10.0-1~), libcairo-ruby1.8 (<< 1.10.0-1~)
 Provides: libcairo-ruby, libcairo-ruby1.8
 Description: Cairo bindings for the Ruby language
  Cairo is a multi-platform library providing anti-aliased vector-based
