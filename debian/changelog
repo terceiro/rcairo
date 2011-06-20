@@ -1,4 +1,4 @@
-ruby-cairo (1.10.0-1) UNRELEASED; urgency=low
+ruby-cairo (1.10.0-1) unstable; urgency=low
 
   * New upstream release.
   * Package is being renamed to ruby-cairo and migrated to use gem2deb.
