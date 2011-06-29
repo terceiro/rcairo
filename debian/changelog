@@ -3,8 +3,9 @@ ruby-cairo (1.10.0-2) unstable; urgency=low
   * debian/source/lintian-overrides: added to avoid warning about descriptions
     being too short.
   * Fix name clash between cairo.rb and cairo.so (Closes: #632071)
+  * added debian/ruby-cairo.examples to install examples
 
- -- Antonio Terceiro <terceiro@softwarelivre.org>  Wed, 29 Jun 2011 12:27:44 -0700
+ -- Antonio Terceiro <terceiro@softwarelivre.org>  Wed, 29 Jun 2011 12:35:38 -0700
 
 ruby-cairo (1.10.0-1) unstable; urgency=low
 
