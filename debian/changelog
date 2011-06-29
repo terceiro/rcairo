@@ -1,3 +1,11 @@
+ruby-cairo (1.10.0-2) UNRELEASED; urgency=low
+
+  * debian/source/lintian-overrides: added to avoid warning about descriptions
+    being too short.
+  * 
+
+ -- Antonio Terceiro <terceiro@softwarelivre.org>  Wed, 29 Jun 2011 12:20:46 -0700
+
 ruby-cairo (1.10.0-1) unstable; urgency=low
 
   * New upstream release.
