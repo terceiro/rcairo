@@ -1,0 +1,3 @@
+This patch contains all the Debian-specific changes mixed together. To review
+them separately, please inspect the VCS history at
+http://anonscm.debian.org/gitweb/?p=pkg-ruby-extras/ruby-cairo.git;a=summary
