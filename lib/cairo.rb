@@ -41,9 +41,9 @@ require 'cairo/paper'
 
 begin
   major, minor, micro, = RUBY_VERSION.split(/\./)
-  require "#{major}.#{minor}/cairo.so"
+  require "#{major}.#{minor}/cairo_ext"
 rescue LoadError
-  require 'cairo.so'
+  require 'cairo_ext'
 end
 require 'cairo/constants'
 
